@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #f9c9d2, #ffd3d8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.heart-animation {
+  animation: float 1.5s ease-in-out infinite;
+}
+
+.romantic-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #b40000;
+  text-shadow: 2px 2px 5px rgba(255, 105, 180, 0.8);
+  margin-bottom: 20px;
+}
+
+.heart {
+  width: 100px;
+  height: 100px;
+  background-color: #ff3366;
+  clip-path: polygon(50% 0%, 0% 35%, 50% 100%, 100% 35%);
+  margin: 0 auto;
+  animation: heart-beat 1s ease-in-out infinite;
+}
+
+.yes-button, .no-button {
+  font-size: 1.2rem;
+  margin: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ff3366;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.yes-button:hover {
+  background-color: #ff4d6b;
+}
+
+.no-button:hover {
+  background-color: #ff6688;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes heart-beat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
